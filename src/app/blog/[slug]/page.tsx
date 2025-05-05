@@ -71,7 +71,7 @@ export default function BlogPostPage() {
     );
   }
 
-  const baseUrl = import.meta.env.VITE_BASE_URL || 'https://typeace.com';
+  const baseUrl = import.meta.env.VITE_BASE_URL || 'https://typeace.netlify.app';
   const pageUrl = `${baseUrl}/blog/${post.slug}`;
 
   return (

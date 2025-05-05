@@ -1,6 +1,6 @@
 // src/app/typing-tests/page.tsx
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "../../components/ui/card";
-import { ArrowRight, List } from "lucide-react";
+import { List } from "lucide-react";
 import { seoData } from "../../lib/seo-data";
 import Meta from '../../components/meta';
 import TypingTestLink from '../../components/typing-test-link';

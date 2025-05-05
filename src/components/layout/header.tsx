@@ -2,7 +2,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import { Menu, Feather, Home, Keyboard, Info, Mail, BookOpen, X } from 'lucide-react';
+import { Menu, Feather, Home, Keyboard, Info, Mail, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useState, useEffect } from 'react';
 

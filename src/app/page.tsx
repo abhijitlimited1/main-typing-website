@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
-import { ArrowRight, Zap, Target, Clock } from "lucide-react";
+import { Zap, Target, Clock } from "lucide-react";
 import TypingTestLink from "../components/typing-test-link";
 
 export default function Home() {

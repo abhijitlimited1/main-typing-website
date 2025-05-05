@@ -4,7 +4,7 @@
  */
 
 import { seoData } from '../lib/seo-data'; // Import your SEO data
-import { blogPosts } from '../lib/blog-data'; // Import blog data
+// import { blogPosts } from '../lib/blog-data'; // Import blog data (not used)
 
 // Define MetadataRoute interface since we're not using Next.js
 interface MetadataRoute {

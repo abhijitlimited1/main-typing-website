@@ -1,7 +1,7 @@
 // src/app/privacy-policy/page.tsx
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../../components/ui/card";
 import { ShieldCheck, Mail } from "lucide-react";
-import { Link } from 'react-router-dom';
+
 import Meta from '../../components/meta';
 import TypingTestLink from '../../components/typing-test-link';
 

@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
-import { Button } from "./ui/button";
+
 import { EnhancedButton } from "./ui/enhanced-button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -192,7 +192,7 @@ export default function ContactForm() {
           className="w-full py-6 text-lg font-medium rounded-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] contact-btn-hover btn-press-effect" 
           glowEffect={true} 
           pulseEffect={!isSubmitting}
-          variant="primary"
+          variant="default"
         >
           {isSubmitting ? (
             <div className="flex items-center justify-center gap-2">

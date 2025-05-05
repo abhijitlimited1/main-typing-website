@@ -425,8 +425,8 @@ const TypingTest = () => {
     });
     
     // Group characters into words for better readability
-    const result = [];
-    let currentWord = [];
+    const result: React.ReactNode[] = [];
+    let currentWord: React.ReactNode[] = [];
     let wordKey = 0;
     
     renderedChars.forEach((charElement, index) => {
@@ -574,7 +574,7 @@ const TypingTest = () => {
                  <DialogClose asChild>
                      <EnhancedButton 
                        type="button" 
-                       variant="primary" 
+                       variant="default" 
                        glowEffect={true} 
                        className="w-full sm:w-auto text-base py-2 px-6"
                      >

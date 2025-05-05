@@ -27,7 +27,7 @@ const Meta = ({
   og,
 }: MetaProps) => {
   // Default base URL (can be overridden by environment variable)
-  const baseUrl = import.meta.env.VITE_BASE_URL || 'https://typeace.com';
+  const baseUrl = import.meta.env.VITE_BASE_URL || 'https://typeace.netlify.app';
   
   // Use the current URL as canonical if not specified
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : `${baseUrl}`);

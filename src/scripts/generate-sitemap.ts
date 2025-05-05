@@ -1,6 +1,9 @@
 /**
  * Script to generate a sitemap.xml file for the Type Ace application.
  * Run with: npm run generate-sitemap
+ * 
+ * This file is excluded from the build process and only used for generating the sitemap.
+ * @ts-nocheck
  */
 
 import fs from 'fs-extra';
@@ -8,14 +11,24 @@ import path from 'path';
 import { seoData } from '../lib/seo-data';
 
 // Replace with your actual domain
-const BASE_URL = process.env.VITE_BASE_URL || 'https://typeace.com';
+const BASE_URL = process.env.VITE_BASE_URL || 'https://typeace.netlify.app';
 const PUBLIC_DIR = path.resolve(__dirname, '../../public');
 
 // Ensure the public directory exists
 fs.ensureDirSync(PUBLIC_DIR);
 
+// Define types for route objects
+type ChangeFreq = 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+
+interface RouteObject {
+  url: string;
+  lastmod: string;
+  changefreq: ChangeFreq;
+  priority: string;
+}
+
 // Static routes
-const staticRoutes = [
+const staticRoutes: RouteObject[] = [
   {
     url: `${BASE_URL}/`,
     lastmod: new Date().toISOString(),
@@ -55,7 +68,7 @@ const staticRoutes = [
 ];
 
 // Dynamic routes from seoData
-const dynamicRoutes = seoData.map((page) => ({
+const dynamicRoutes: RouteObject[] = seoData.map((page) => ({
   url: `${BASE_URL}/typing-test/${page.slug}`,
   lastmod: new Date().toISOString(),
   changefreq: 'monthly',
@@ -63,7 +76,7 @@ const dynamicRoutes = seoData.map((page) => ({
 }));
 
 // Combine all routes
-const allRoutes = [...staticRoutes, ...dynamicRoutes];
+const allRoutes: RouteObject[] = [...staticRoutes, ...dynamicRoutes];
 
 // Generate sitemap XML
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

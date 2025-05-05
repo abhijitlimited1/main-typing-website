@@ -7,4 +7,4 @@ Disallow: /admin/
 Disallow: /private/
 
 # Sitemaps
-Sitemap: https://typeace.com/sitemap.xml
+Sitemap: https://typeace.netlify.app/sitemap.xml
