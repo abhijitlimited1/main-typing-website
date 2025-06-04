@@ -19,9 +19,9 @@ interface MetaProps {
 }
 
 const Meta = ({
-  title = 'Type Ace - Improve Your Typing Speed',
-  description = 'Free online typing test to measure your typing speed and accuracy. Practice and improve your WPM with Type Ace.',
-  keywords = 'typing test, typing speed, WPM, words per minute, typing practice, keyboard skills',
+  title = 'Typing Speed Test - Online Free Typing Practice | TypeAce',
+  description = 'Take a free online typing speed test with TypeAce. Improve your typing practice and track your progress. Fast, simple, and accurate English typing test.',
+  keywords = 'typing speed test, typing practice, online typing test, free typing test, typing test practice, english typing test, fast typing test, WPM, words per minute, keyboard skills',
   robots = 'index, follow',
   canonical,
   og,
@@ -79,7 +79,7 @@ const Meta = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "name": "Type Ace",
+          "name": "TypeAce",
           "url": baseUrl,
           "description": description,
           "potentialAction": {
@@ -95,7 +95,7 @@ const Meta = ({
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
-          "name": "Type Ace",
+          "name": "TypeAce",
           "url": baseUrl,
           "logo": `${baseUrl}/logo.png`,
           "sameAs": [
@@ -103,6 +103,18 @@ const Meta = ({
             "https://facebook.com/typeace",
             "https://instagram.com/typeace"
           ]
+        })}
+      </script>
+      
+      {/* Structured Data for Software Application (for Google Rich Results) */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "TypeAce Typing Test",
+          "applicationCategory": "EducationApplication",
+          "operatingSystem": "Web",
+          "description": "Free online typing speed test and typing practice tool."
         })}
       </script>
     </Helmet>

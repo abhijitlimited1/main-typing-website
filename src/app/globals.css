@@ -11,7 +11,7 @@ body {
       --popover: 0 0% 100%;
       --popover-foreground: 0 0% 3.9%;
       --primary: 180 100% 25%; /* Teal #008080 */
-      --primary-foreground: 0 0% 98%; /* White */
+      --primary-foreground: 0 0% 100%; /* Pure White for better contrast */
       --secondary: 190 67% 93%; /* Light Blue #E0F7FA */
       --secondary-foreground: 180 100% 15%; /* Darker Teal for contrast on Light Blue */
       --muted: 0 0% 90%; /* Slightly darker gray */
@@ -47,9 +47,9 @@ body {
       --popover: 200 10% 10%;
       --popover-foreground: 0 0% 98%;
       --primary: 180 80% 45%; /* Brighter Teal */
-      --primary-foreground: 0 0% 10%; /* Dark Text */
+      --primary-foreground: 0 0% 98%; /* White Text for better contrast */
       --secondary: 190 50% 25%; /* Darker Light Blue */
-      --secondary-foreground: 0 0% 90%; /* Lighter Text */
+      --secondary-foreground: 0 0% 98%; /* White Text for better contrast */
       --muted: 200 10% 20%;
       --muted-foreground: 0 0% 63.9%;
       --accent: 190 50% 35%; /* Darker accent blue */
@@ -114,37 +114,55 @@ body {
   
   /* Custom styles for character highlighting */
   .correct {
-    color: #16a34a; /* green-600 */
+    color: #16a34a !important; /* green-600 */
     font-weight: 500;
   }
   .dark .correct {
-    color: #4ade80; /* green-400 */
+    color: #4ade80 !important; /* green-400 */
     font-weight: 500;
   }
 
   .incorrect {
-    color: #dc2626; /* red-600 */
+    color: #dc2626 !important; /* red-600 */
     background-color: #fee2e2; /* red-100 */
     font-weight: 500;
   }
   .dark .incorrect {
-    color: #f87171; /* red-400 */
+    color: #f87171 !important; /* red-400 */
     background-color: rgba(127, 29, 29, 0.5); /* red-900/50 */
     font-weight: 500;
+  }
+  
+  /* Ensure incorrect text is always visible */
+  .incorrect.char-span {
+    color: #dc2626 !important; /* red-600 */
+  }
+  .dark .incorrect.char-span {
+    color: #f87171 !important; /* red-400 */
+  }
+  
+  /* Ensure current character is always visible */
+  .current.char-span {
+    color: #000000 !important; /* black */
+    background-color: #e5e7eb !important; /* gray-200 */
+  }
+  .dark .current.char-span {
+    color: #ffffff !important; /* white */
+    background-color: #4b5563 !important; /* gray-600 */
   }
 
   /* Current character (cursor) styling */
   .current {
     /* Using border or background, choose one */
     border-bottom: 2px solid hsl(var(--primary)); /* Option 1: Underline */
-    background-color: hsl(var(--secondary)); /* Option 2: Background highlight */
+    background-color: #e5e7eb !important; /* gray-200 */
     border-radius: 0.25rem;
-    color: hsl(var(--foreground));
+    color: #000000 !important;
     font-weight: 600;
   }
   .dark .current {
-    background-color: hsla(var(--primary), 0.3);
-    color: hsl(var(--foreground));
+    background-color: #4b5563 !important; /* gray-600 */
+    color: #ffffff !important;
     border-bottom: 2px solid hsl(var(--primary-foreground));
   }
   
@@ -286,8 +304,8 @@ body {
   
   /* Select dropdown enhancements for all modes */
   [data-radix-select-trigger] {
-    background-color: white;
-    color: black;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     border-color: hsla(var(--primary), 0.3);
     min-height: 40px;
     padding: 8px 12px;
@@ -295,8 +313,8 @@ body {
   }
   
   [data-radix-select-content] {
-    background-color: white;
-    color: black;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     border-color: hsla(var(--primary), 0.3);
     box-shadow: 0 0 0 1px hsla(var(--primary), 0.3), 0 4px 8px rgba(0, 0, 0, 0.2);
     max-width: 95vw; /* Prevent overflow on mobile */
@@ -304,12 +322,12 @@ body {
   }
   
   [data-radix-select-viewport] {
-    background-color: white;
+    background-color: hsl(var(--background));
     padding: 6px;
   }
   
   [data-radix-select-item] {
-    color: black;
+    color: hsl(var(--foreground));
     padding: 10px 12px 10px 36px; /* More touch-friendly */
     margin: 2px 0;
     border-radius: 6px;
@@ -318,23 +336,33 @@ body {
   
   [data-radix-select-item][data-highlighted] {
     background-color: hsla(var(--primary), 0.2);
-    color: black;
+    color: hsl(var(--foreground));
   }
-  
+
+  .dark [data-radix-select-item][data-highlighted] {
+    background-color: hsla(var(--primary), 0.3);
+    color: white;
+  }
+
   [data-radix-select-item]:hover {
     background-color: hsla(var(--primary), 0.1);
+  }
+  
+  .dark [data-radix-select-item]:hover {
+    background-color: hsla(var(--primary), 0.2);
   }
   
   /* Specific dark mode overrides if needed */
   .dark [data-radix-select-trigger],
   .dark [data-radix-select-content],
   .dark [data-radix-select-viewport] {
-    background-color: white;
-    color: black;
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    border-color: hsl(var(--border));
   }
   
   .dark [data-radix-select-item] {
-    color: black;
+    color: hsl(var(--foreground));
   }
   
   /* Mobile-specific enhancements */
@@ -392,8 +420,15 @@ body {
   
   /* Add subtle background to untyped text for better readability */
   .text-foreground\/70.char-span {
-    background-color: hsla(var(--background), 0.5);
+    background-color: transparent;
     border: 1px solid transparent;
+    color: #374151 !important; /* gray-700 */
+    opacity: 0.9;
+  }
+  
+  .dark .text-foreground\/70.char-span {
+    color: #d1d5db !important; /* gray-300 */
+    opacity: 0.9;
   }
   
   /* Add subtle animation to current character */

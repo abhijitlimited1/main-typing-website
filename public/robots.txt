@@ -1,3 +1,4 @@
+# TypeAce - Typing Speed Test Website
 User-agent: *
 Allow: /
 
@@ -5,6 +6,18 @@ Allow: /
 Disallow: /api/
 Disallow: /admin/
 Disallow: /private/
+Disallow: /dev/
+Disallow: /test/
+
+# Allow search engines to crawl these important SEO pages
+Allow: /typing-speed-test
+Allow: /typing-practice
+Allow: /online-typing-test
+Allow: /free-typing-test
+Allow: /english-typing-test
+Allow: /fast-typing-test
+Allow: /typing-tests
+Allow: /typing-test/
 
 # Sitemaps
 Sitemap: https://typeace.netlify.app/sitemap.xml

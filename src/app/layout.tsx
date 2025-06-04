@@ -14,8 +14,8 @@ export default function Layout({
     <div className="font-sans antialiased flex flex-col min-h-screen">
       {/* Default Meta - individual pages can override these values */}
       <Meta
-        title="Type Ace - Online Typing Test & Practice"
-        description="Improve your typing speed and accuracy with Type Ace. Free online typing tests, practice sessions, and detailed performance analysis."
+        title="Typing Speed Test - Online Free Typing Practice | TypeAce"
+        description="Take a free online typing speed test with TypeAce. Improve your typing practice and track your progress. Fast, simple, and accurate English typing test."
         robots="index, follow"
       />
       

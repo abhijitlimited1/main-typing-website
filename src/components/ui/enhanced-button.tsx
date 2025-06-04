@@ -13,7 +13,8 @@ const EnhancedButton = React.forwardRef<HTMLButtonElement, EnhancedButtonProps>(
     return (
       <Button
         className={cn(
-          "relative overflow-hidden",
+          "relative overflow-hidden text-white dark:text-white", // Ensure text is always visible
+          variant === "outline" && "text-primary dark:text-primary", // Special case for outline buttons
           glowEffect && "hover:shadow-[0_0_15px_rgba(var(--primary),0.5)]",
           pulseEffect && "pulse-animation",
           className

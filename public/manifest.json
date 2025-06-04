@@ -1,7 +1,7 @@
 {
-  "name": "Type Ace - Free Online Typing Test",
-  "short_name": "Type Ace",
-  "description": "Free online typing test to measure your typing speed and accuracy. Practice and improve your WPM with Type Ace.",
+  "name": "TypeAce - Typing Speed Test & Practice",
+  "short_name": "TypeAce",
+  "description": "Take a free online typing speed test with TypeAce. Improve your typing practice and track your progress. Fast, simple, and accurate English typing test.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f5f5f5",

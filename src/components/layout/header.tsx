@@ -2,13 +2,16 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '../ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
-import { Menu, Feather, Home, Keyboard, Info, Mail, X } from 'lucide-react';
+import { Menu, Feather, Home, Keyboard, Info, Mail, X, Sparkles } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { useState, useEffect } from 'react';
+import { ThemeSwitcher } from '../theme-switcher';
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
-  { href: '/typing-tests', label: 'Typing Tests', icon: Keyboard },
+  { href: '/typing-speed-test', label: 'Speed Test', icon: Keyboard },
+  { href: '/typing-practice', label: 'Practice', icon: Keyboard },
+  { href: '/typing-tests', label: 'All Tests', icon: Keyboard },
   { href: '/about', label: 'About', icon: Info },
   { href: '/contact', label: 'Contact', icon: Mail },
 ];
@@ -38,7 +41,7 @@ export default function Header() {
       <div className="container flex h-14 md:h-16 items-center justify-between">
         <Link to="/" className="flex items-center space-x-2 no-bg">
           <Feather className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg">Type Ace</span>
+          <span className="font-bold text-lg">TypeAce</span>
         </Link>
         
         {/* Desktop Navigation */}
@@ -57,6 +60,18 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <div className="flex items-center gap-2 ml-2">
+            <ThemeSwitcher />
+            <div className="relative">
+              <Link 
+                to="/typing-speed-test" 
+                className="flex items-center gap-1.5 bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
+              >
+                <Sparkles className="h-4 w-4 text-white" />
+                <span className="font-bold text-white">Start Test</span>
+              </Link>
+            </div>
+          </div>
         </nav>
         
         {/* Mobile Navigation */}
@@ -77,7 +92,7 @@ export default function Header() {
                 <div className="flex items-center justify-between py-4 px-2 border-b">
                   <div className="flex items-center space-x-2">
                     <Feather className="h-6 w-6 text-primary" />
-                    <span className="font-bold text-xl text-black dark:text-white">Type Ace</span>
+                    <span className="font-bold text-xl text-black dark:text-white">TypeAce</span>
                   </div>
                   <Button 
                     variant="ghost" 
@@ -120,7 +135,7 @@ export default function Header() {
                 
                 <div className="mt-auto border-t py-4 px-4">
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    © {new Date().getFullYear()} Type Ace
+                    © {new Date().getFullYear()} TypeAce
                   </p>
                 </div>
               </div>

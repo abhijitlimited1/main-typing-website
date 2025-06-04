@@ -159,7 +159,7 @@ export default function TypingTestPage() {
         <div className="mt-8 w-full max-w-3xl">
           <img
             src={`https://picsum.photos/seed/${pageData.slug}/800/400`}
-            alt={`Illustration representing ${pageData.keyword}`}
+            alt={`Online typing test for ${pageData.keyword} - Practice your typing skills with TypeAce`}
             className="rounded-md shadow-md w-full h-auto object-cover"
             loading="lazy"
             width={800}

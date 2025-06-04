@@ -3,47 +3,112 @@
   <!-- Homepage -->
   <url>
     <loc>https://typeace.netlify.app/</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  
+  <!-- SEO-focused Pages (High Priority) -->
+  <url>
+    <loc>https://typeace.netlify.app/typing-speed-test</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/typing-practice</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/online-typing-test</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/free-typing-test</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/english-typing-test</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/fast-typing-test</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   
   <!-- Typing Tests Page -->
   <url>
     <loc>https://typeace.netlify.app/typing-tests</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Specific Typing Test Pages -->
+  <url>
+    <loc>https://typeace.netlify.app/typing-test/30-second</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/typing-test/1-minute</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://typeace.netlify.app/typing-test/2-minute</loc>
+    <lastmod>2024-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   
   <!-- About Page -->
   <url>
     <loc>https://typeace.netlify.app/about</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   
   <!-- Contact Page -->
   <url>
     <loc>https://typeace.netlify.app/contact</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.6</priority>
   </url>
   
-  <!-- Privacy Policy Page (if exists) -->
+  <!-- Privacy Policy Page -->
   <url>
     <loc>https://typeace.netlify.app/privacy-policy</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   
-  <!-- Terms of Service Page (if exists) -->
+  <!-- Terms of Service Page -->
   <url>
     <loc>https://typeace.netlify.app/terms</loc>
-    <lastmod>2023-11-15</lastmod>
+    <lastmod>2024-06-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -16,7 +16,7 @@ export default function Footer() {
       <div className="container mx-auto px-4 py-6 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-center text-sm text-muted-foreground md:text-left">
-            &copy; {currentYear} Type Ace. All rights reserved.
+            &copy; {currentYear} TypeAce. All rights reserved.
           </p>
           <nav className="flex flex-wrap justify-center gap-x-4 gap-y-2 md:justify-end">
             {footerLinks.map((link) => (
@@ -29,10 +29,28 @@ export default function Footer() {
               </Link>
             ))}
              <Link
-              to="/typing-tests"
+              to="/typing-speed-test"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
              >
-                Typing Tests
+                Typing Speed Test
+            </Link>
+            <Link
+              to="/typing-practice"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+             >
+                Typing Practice
+            </Link>
+            <Link
+              to="/english-typing-test"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+             >
+                English Typing Test
+            </Link>
+            <Link
+              to="/free-typing-test"
+              className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+             >
+                Free Typing Test
             </Link>
           </nav>
         </div>
